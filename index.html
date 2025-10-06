@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio</title>
+<link href="style.css" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  nav {
+    background: #333;
+    color: white;
+    padding: 10px;
+  }
+  .menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    padding: 10px;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Menu Button */
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+    background-color:whitesmoke;
+  }
+
+  /* Checkbox Hack */
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu {
+    display: block;
+  }
+</style>
+</head>
+<body>
+   <header> 
+     <img  src="https://preview.colorlib.com/theme/personal/img/logo.png.webp"
+           height="75px">   
+<nav>
+  <label for="menu-toggle" class="menu-btn">☰</label>
+  <input type="checkbox" id="menu-toggle">
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+   </header>
+   <div class="hs">
+     <h2 style="font-size: 40px;"><i>THIS IS ME</i></h2>
+     <h1 style="font-size: 60px;">Muhammad Sikander Raza</h1>
+     <pre><p style="font-size: 30px; padding-left: 10px; color:#333;">You will begin to realise why this exercise is called the
+Dickens Pattern with reference to the ghost showing 
+Scrooge some different futures.</p></pre>
+     <button class="btn">DISCOVER NOW</button>
+   </div>
+</body>
+</html>
+   
