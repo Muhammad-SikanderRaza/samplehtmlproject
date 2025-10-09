@@ -2,7 +2,12 @@
 <html>
     <head>
         <title>Portfolio</title>
+        <link rel="stylesheet" href="style2.css">
         <link href="style.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -10,27 +15,80 @@
             <nav class="nb">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
             </nav>
         </header>
-        <!--Home Section-->
-        <section id="home">
-         <div class="contain">
-           <h5 style="font-size: 25px;">THIS IS ME</h5>
-           <h1>MUHAMMAD SIKANDER RAZA</h1>
-           <p>💡 Clean & Professional:
-              "Transforming ideas into interactive digital experiences."</p>
-           <button class="btn">DISCOVER NOW</button>
-         </div>
-        </section>
-        <!--About Section-->
-        <section id="about">
-          <div>
-               <h5 style="font-size: 25px;">About Me</h5>
-               <h1>Personal details</h1>
-               <p>I’m a beginner Web Developer who loves learning and building creative websites. I focus on writing clean code and improving my skills every day to become a professional developer.</p>
-          </div>        
-        </section>
-    </body>
+
+               <!--Home Section-->
+                <section id="home">
+                  <div class="contain">
+                    <h5 style="font-size: 25px;">THIS IS ME</h5>
+                    <h1>MUHAMMAD SIKANDER RAZA</h1>
+                    <p>💡 Clean & Professional:
+                       "Transforming ideas into interactive digital experiences."</p>
+                    <button class="btn">HIRE NOW</button>
+                 </div>
+                 </section>
+
+             <!--About Section-->
+                 <section id="about">
+                    <div>
+                     <h5 style="font-size: 25px;">About Me</h5>
+                     <h1>Personal details</h1>
+                     <p>Hi, I’m Muhammad Sikander Raza — a passionate beginner Web Developer who loves learning and creating modern, responsive websites. I focus on writing clean and organized code while exploring new tools, frameworks, and design trends.
+
+My goal is to build user-friendly and visually appealing websites that not only look good but also perform well. Every project I work on helps me understand web technologies better and pushes me to grow as a developer.
+
+I’m currently improving my skills in HTML, CSS, and JavaScript, and I’m always excited to learn more about front-end and back-end development to become a full-stack developer in the future.</p>
+                   </div>        
+                 </section>
+
+                  <!--Skills Section-->
+                <section id="skills">
+                     <h1>My Skills</h1>
+                      <div class="icons">
+                       <div class="i1" style="display: grid;">
+                        <i class="fa-brands fa-html5 h5" style="font-size: 150px;"></i>
+                        <h1>HTML 5</h1>
+                       </div>
+                       <div class="i2" style="display: grid;">
+                       <i class="fa-brands fa-css3-alt c3" style="font-size: 150px;"></i>
+                       <h1>CSS 3</h1> 
+                       </div>
+                     </div>
+                </section>
+                 
+                    <!--Contact Section-->
+                    <section id="contact">
+                    <h1>Contact Me</h1>
+                    <p>Have a prjoect in mind or just want to say hello?
+                        Feel free to reach out!</p>
+                        <form action="submit" method="post">
+                       <div class="form">     
+                        <input type="text" id="name" name="name" placeholder="Full Name">
+                        <input type="email" id="email" name="email" placeholder="Email Address">
+                        <input type="message" id="message" name="message" placeholder="Your Message">
+                        <button type="submit" style="font-size: 18px; background-color: rgb(118,46,196); border-radius: 40px; color: white;">Send Mesaage</button>
+                        </div>  
+                    </form>  
+                    <div class="connect">
+                     <p><i class="fa-solid fa-envelope"></i>Email: msikander.raza13@gmail.com</p>
+                     <p><i class="fa-solid fa-phone"></i>Phone: +92 322 3830266</p>
+                     <p><i class="fa-solid fa-location-dot"></i>Sukkur,Pakistan</p>
+                    </div>
+                    </section>
+
+                    <!--Socail Links-->
+                    <section class="socialLinks">
+                    <a href="https://github.com/Muhammad-SikanderRaza" target="_blank"><i class="fa-brands fa-github" style="font-size: 40px;"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-sikander-raza-524482385/" target="_blank"><i class="fa-brands fa-square-linkedin" style="font-size: 42px;"></i></a>
+                    <a href="https://www.facebook.com/muhammadsaleem.memon.94/" target="_blank"<i class="fa-brands fa-facebook" style="font-size: 39px;"></i></a>
+                    <a href="https://www.instagram.com/sikander64264/" target="_blank"><i class="fa-brands fa-instagram" style="font-size: 40px;"></i></a>
+                    </section>
+                    <hr>
+                    <footer>
+                    <p> © 2025 Muhammad Sikander Raza | All Rights Reserved.</p>
+                    </footer>
+    </body>            
 </html>

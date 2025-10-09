@@ -1,6 +1,7 @@
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    font-family: poppins, sans-serif;
+}    
+
 header{
     display: flex;
     flex-direction: row;
@@ -16,6 +17,11 @@ header{
     gap: 50px;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .contain{
     padding-top: 150px;
     padding-left: 100px;
@@ -29,3 +35,72 @@ header{
     padding: 8px;
 }
 
+#about{
+    text-align: center;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-bottom: 200px;
+    padding-top: 50px;
+}
+
+#skills{
+    display: grid;
+    justify-content:space-between;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 150px;
+    gap: 50px;
+    text-align: center;
+}    
+
+.h5{
+    font-size: 150px;
+}
+
+.c3{
+    font-size: 100px;
+}
+
+.icons{
+    display: flex;
+   flex-direction:row ;
+   gap: 50px;
+}
+
+#contact{
+    display: grid;
+    justify-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+input{
+    font-size: 20px;
+}
+
+.connect{
+    display: grid;
+    padding-top: 20px;
+    padding-left: 80px;
+}
+
+.socialLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    padding-right: 30px;
+    padding-top: 20px;
+    gap: 15px;
+}
+
+footer{
+    background-color: brown;
+}
+
+a:hover{
+    color: rgb(118, 46, 196);
+}
