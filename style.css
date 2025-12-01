@@ -1,106 +1,67 @@
-body{
-    font-family: poppins, sans-serif;
-}    
-
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+        /* cars-strip */
+.cars-container {
+  padding: 4rem 0;
+  background-color: #0f1724;
 }
 
-.nb{
-    margin-right: 150px;
-    display: flex;
-    gap: 50px;
+.heading-txt {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(230, 238, 248, 0.85) !important;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+.btn {
+  background-color: rgba(0, 0, 0, 0.144) !important;
+  cursor: pointer;
+  color: rgba(230, 238, 248, 0.85) !important;
 }
 
-.contain{
-    padding-top: 150px;
-    padding-left: 100px;
-    padding-bottom: 150px;
+.featured-cars {
+  margin-top: 40px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
-.btn{
-    color:white;
-    background-color: rgb(118, 46, 196);
-    border-radius: 77px;
-    padding: 8px;
+.cars-card {
+  width: 250px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(2px);
+  transition: 0.4s ease;
 }
 
-#about{
-    text-align: center;
-    padding-left: 350px;
-    padding-right: 350px;
-    padding-bottom: 200px;
-    padding-top: 50px;
+.cars-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.45);
 }
 
-#skills{
-    display: grid;
-    justify-content:space-between;
-    padding-left: 500px;
-    padding-right: 500px;
-    padding-bottom: 150px;
-    gap: 50px;
-    text-align: center;
-}    
 
-.h5{
-    font-size: 150px;
+.cars-card img{
+  width: 100%;
+  height: auto;
+  border-radius:  12px 12px 0 0;
 }
 
-.c3{
-    font-size: 100px;
+.cars-dtl {
+  color: rgba(230, 238, 248, 0.85);
+  padding: 10px;
+  font-size: 12px;
 }
 
-.icons{
-    display: flex;
-   flex-direction:row ;
-   gap: 50px;
+.cars-card h4{
+  font-size: 18px;
 }
 
-#contact{
-    display: grid;
-    justify-items: center;
-}
-
-.form{
-    display: flex;
+@media (max-width: 768px) {
+  .featured-sec {
     flex-direction: column;
-    gap: 30px;
-}
+    align-items: center;
+    height: auto;
+  }
 
-input{
-    font-size: 20px;
-}
-
-.connect{
-    display: grid;
-    padding-top: 20px;
-    padding-left: 80px;
-}
-
-.socialLinks{
-    display: flex;
-    flex-direction: row;
-    justify-content:  center;
-    padding-right: 30px;
-    padding-top: 20px;
-    gap: 15px;
-}
-
-footer{
-    background-color: brown;
-}
-
-a:hover{
-    color: rgb(118, 46, 196);
+  .featured-cars {
+    justify-content: center;
+  }
 }
