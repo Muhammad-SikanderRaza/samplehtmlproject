@@ -1,24 +1,21 @@
-// function checkNumber(){
-//     let num = document.getElementById("numberinput").value;
-//     if((num % 2) == 0){
-//         alert("The number is even");
-//     }
-//     else{
-//         alert("The number is odd");
-//     }
-// }
 
-
-
-function guessTheNumber(){
-    let num = Math.floor(Math.random()*10)+1;
-    let userNumber = document.getElementById("numberinput");
-    let resultParagraph = document.getElementById("result");
-
-    if(userNumber === num){
-        resultParagraph.textContent = "You guessed the correct number!"
-    }
-    else{
-        resultParagraph.textContent = `Wrong guess! The correct number was ${num}`
-    }
+function multiply(func, number1, number2) {
+    func(number1 * number2);
 }
+
+multiply(console.log, 2, 5);
+
+
+function add(func, number1, number2) {
+    func(number1 + number2);
+}
+
+add(console.log, 1007, 9990);
+
+const p = new Promise((res, rej) => {
+    res("fail hogaya bhai");
+});
+
+p.then((res) => console.log("Then called:", res))
+    .catch((rej) => console.log("Catch called:", rej))
+    .finally(() => console.log("Promise done!"));
