@@ -20,10 +20,41 @@
     <hr>
     <h1 id="sts">Status</h1> -->
 
+         <div>
+        <h5>Hizbullah</h5>
+        <img
+          src="https://pakembmanila.org/wp-content/uploads/2023/03/undefined.jpg"
+          height="75"
+          width="50"
+          alt=""
+        />
+        <br />
+        <button onclick="voteForHizbullah()">Vote for Hizbullah</button>
+        <br />
+        <h6 id="hizbullahVotes">0</h6>
+      </div>
+      <div>
+        <h5>Rizwan</h5>
+        <img
+          src="https://pakembmanila.org/wp-content/uploads/2023/03/undefined.jpg"
+          height="75"
+          width="50"
+          alt=""
+        />
+        <br />
+        <button onclick="voteForRizwan()">Vote for Rizwan</button>
+        <br />
+        <h6 id="rizwanVotes">0</h6>
+      </div>
+    </div>
 
+    <hr />
+    <h1>Winner Status</h1>
+    <h2 id="winner">Winner Name</h2>
     
 </body>
     <script>
+
         // const element = document.getElementById("intro");
         // console.log(element);
 
@@ -56,7 +87,7 @@
             // }
             // }
             
-            const ElECTION = {
+            const ELECTION = {
                 totalVotes: 0;
                 hizbullah: 0;
                 rizwan:0;
@@ -68,17 +99,30 @@
                 announceWinner();
             }
 
-            function voteForHizbullah(){
+            function voteForRizwan(){
                 ELECTION.totalVotes++;
-                ELECTION.hizbullah++;
+                ELECTION.Rizwan++;
                 announceWinner();
             }
 
             function announceWinner(){
                 if (ELECTION.hizbullah > ELECTION.rizwan){
-                    document.getElementBy
-                }
-            }
+                document.getElementById("winner").innerText = "Hizbullah WON the Election";
+        }
+
+                else if (ELECTION.hizbullah < ELECTION.rizwan) {
+                document.getElementById("winner").innerText = "RIZWAN WON the Election";
+        }
+
+                else if (ELECTION.hizbullah == ELECTION.rizwan) {
+                document.getElementById("winner").innerText = "BOTH ARE EQUAL";
+        }
+
+               document.getElementById("hizbullahVotes").innerText =
+               ELECTION.hizbullah;
+               document.getElementById("rizwanVotes").innerText = ELECTION.rizwan;
+      }
+
     </script>
 </body>
 </html>
