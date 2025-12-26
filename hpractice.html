@@ -114,6 +114,74 @@
             }
             document.getElementById("generated_password").innerText = strongpassword;
         }
+
+
+//         <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>Document</title>
+//   </head>
+//   <body>
+//     <h1>Strong Password Generator</h1>
+//     <form onsubmit="generateMyStrongPassword(event)">
+//       <input
+//         id="passLength"
+//         type="number"
+//         placeholder="Enter Password Length"
+//       />
+//       <input type="submit" value="Generate Password" />
+//     </form>
+//     <hr />
+//     <h1 id="generated_password">Generated Password</h1>
+
+//     <script>
+//       const characters = [
+//         "A",
+//         "B",
+//         "C",
+//         "D",
+//         "E",
+//         "F",
+//         "G",
+//         "H",
+//         "I",
+//         "J",
+//         "K",
+//         "L",
+//         "1",
+//         "2",
+//         "3",
+//         "4",
+//         "5",
+//         "6",
+//         "7",
+//         "8",
+//         "9",
+//         "10",
+//         "#",
+//         "$",
+//         "@",
+//         "&",
+//         "(",
+//         ")",
+//       ];
+//       let randomNum = null;
+//       var strongPassword = "";
+//       function generateMyStrongPassword(event) {
+//         event.preventDefault();
+//         strongPassword = "";
+//         let passLength = document.getElementById("passLength").value;
+//         for (let i = 1; i <= passLength; i++) {
+//           randomNum = Math.trunc(Math.random() * characters.length);
+//           strongPassword += characters[randomNum];
+//         }
+//         document.getElementById("generated_password").innerText = strongPassword;
+//       }
+//     </script>
+//   </body>
+// </html>
     </script>
 </body>
 </html>
