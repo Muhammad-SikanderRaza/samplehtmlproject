@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H Practice</title>
+</head>
+<body>
+
+    <!--------------------- Bulb On Off --------------------------->
+    <h1>Bulb</h1>
+    <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" height="75" width="50" alt=""><br>
+    <button onclick="turnOnBulb()">Turn On</button>
+    <button onclick="turnOffBulb()">Turn Off</button>
+    <h1 id="sts">Off</h1>
+    <hr>
+ 
+    <!----------------------Rolling Dice Game------------------->
+    <h1>Rolling Dice Game</h1>
+    <img id="dice"  src="https://stationers.pk/cdn/shop/files/1_1.jpg?v=1737533932&width=500" height="100"  width="100">
+    <button onclick="rollDice()">Roll Dice</button>
+    <hr>
+    <h1 id="diceNo">-</h1>
+    <hr>
+
+
+
+
+
+    <!------------------Strong Password Generator--------------------------->
+    
+    <h1>Strong Password Generator</h1>
+
+    <form onsubmit="generateMyStrongPassword(event)">
+        <input id="passlength"
+        type="number"
+        placeholder="Enter password Length">
+
+        <input type="submit" value="Generate Password">
+    </form>
+    <hr>
+    <h1 id="generated_password">Generated Password</h1>
+
+
+    <script>
+
+ 
+        //          JS Of Bulb On Off
+        function turnOnBulb(){
+            document.getElementById("bulb").src ="https://www.w3schools.com/js/pic_bulbon.gif";
+            document.getElementById("sts").innerText ="On";
+        }
+
+        function turnOffBulb(){
+            
+            document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulboff.gif";
+            document.getElementById("sts").innerText = "Off";
+        }
+
+ 
+
+        //         JS of Rolling Dice Game
+        let diceNum = null;
+
+        function rollDice(){
+            document.getElementById("diceNo").innerText ="-";
+            document.getElementById("dice").src = "rolling.webp";
+
+            setTimeout(() =>{
+                diceNum = Math.trunc(Math.random()*6)+1;
+                document.getElementById("dice").src = `${diceNum}.png`;
+                document.getElementById("diceNo").innerText = diceNum;
+            },3000);
+        }
+
+
+
+        //         JS of Random Password Generator
+        const characters = [
+            "q",
+            "w",
+            "e",
+            "r",
+            "t",
+            "y",
+            "u",
+            "i",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "`",
+            "!",
+            "@",
+            "#",
+            "$",
+            "^",
+            "&",
+            "_"
+        ];
+        let randomNum = null;
+        var strongPassword = "";
+        function generateMyStrongPassword(event){
+            event.preventDefault();
+            strongPassword = "";
+            let passLength = document.getElementById("passLength").value;
+            for (let i = 1; i <= passlength; i++){
+                randomNum = Math.trunc(Math.radom() * characters.length);
+                strongPassword += characters[randomNum];
+            }
+            document.getElementById("generated_password").innerText = strongpassword;
+        }
+    </script>
+</body>
+</html>
