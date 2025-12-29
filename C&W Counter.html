@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters,Words and Vowels Counter</title>
+</head>
+<body>
+    <h1>Characters & Words Counter</h1>
+    <form onsubmit="wordsAndCharactersCounter(event)">
+    <textarea rows="5" cols="50" id="note" placeholder="Please enter your note" required></textarea><br>
+    <input type="submit" value="Count">
+    </form>
+    <hr>
+    <h1 id="charactersCount">Total Characters</h1>
+    <h1 id="wordsCount">Total Words</h1>
+    <h1 id="vowelsCount">Vowels Count</h1>
+
+    <script>
+        function wordsAndCharactersCounter(event){
+        event.preventDefault();
+        let userNote =  document.getElementById("note").value;
+        let totalCharacters = userNote.length;
+        let totalWords = userNote.split(" ").length;
+        document.getElementById("charactersCount").innerText = totalCharacters;
+        document.getElementById("wordsCount").innerText = totalWords;
+
+        let vowels = 0;
+        let charactersArray = userNote.split("");
+        for (let i = 0; i < charactersArray.length; i++){
+            if(
+                charactersArray[i].toLowerCase() == "a" ||
+                charactersArray[i].toLowerCase() == "e" ||
+                charactersArray[i].toLowerCase() == "i" ||
+                charactersArray[i].toLowerCase() == "o" ||
+                charactersArray[i].toLowerCase() == "u" 
+            ){
+                vowels++;
+            }
+        }
+        document.getElementById("vowelsCount").innerText = vowels;
+    }
+    </script>
+</body>
+</html>
