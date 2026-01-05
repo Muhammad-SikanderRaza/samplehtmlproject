@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" id="allProducts"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      fetch("https://dummyjson.com/products")
+        .then((res) => res.json())
+        .then((resp) => {
+          resp = resp.products;
+          let rows = "";
+          for (let i = 0; i < resp.length; i++) {
+            rows += `<div class="col-md-3">
+          <div class="card">
+            <img
+              src="${resp[i].thumbnail}"
+              class="card-img-top"
+              alt="Product Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">${resp[i].title}</h5>
+              <p class="card-text">Short product description goes here.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="h5 mb-0">$${resp[i].price}</span>
+                <div>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-half text-warning"></i>
+                  <small class="text-muted">(4.5)</small>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-light">
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+              <button class="btn btn-outline-secondary btn-sm">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>`;
+          }
+
+          document.getElementById("allProducts").innerHTML = rows;
+        });
+    </script>
+  </body>
+</html>
