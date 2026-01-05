@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="videoThumbnail" src="" height="300" width="400">
+    <h5 id="videoTitle"></h5>
+    <p>Video In Seconds: <span id="videoDuration"></span></p>
+    <div id="downloadBtns" style="display: flex; flex-direction: column;"></div>
+
+    <script>
+     fetch("https://api.vidssave.com/api/contentsite_api/media/parse", {
+   headers: {
+     accept: "*/*",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  referrer: "https://vidssave.com/",
+  body: "auth=20250901majwlqo&domain=api-ak.vidssave.com&origin=source&link=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX8BYu3dMKf0",
+  method: "POST",
+  mode: "cors",
+  credentials: "omit"
+})
+  .then((res)=> res.json())
+  .then((resp) =>{
+    document.getElementById("videoThumbnail").src = resp.data.thumbnail;
+    document.getElementById("videoTitle").innerText = resp.data.title;
+    document.getElementById("videoDuration").innerText = resp.data.duration;
+    let allVideos = resp.data.resources;
+    console.log(allVideos);
+    let btns = "";
+    for(let i = 0; i < allVideos.length; i++){
+        btns += `<a href='${allVideos[i].download_url}' target = "_blank" title = '${resp.data.title}'>
+            <button>
+                Download ${allVideos[i].format} | ${allVideos[i].quality}</buttons>
+                </a>`;
+    }
+        document.getElementById("downloadBtns").innerHTML = btns;
+    });
+
+    </script>
+</body>
+</html>
