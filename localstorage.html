@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // localStorage.setItem("name", "Sikander");
+        // localStorage.setItem("age", 20);
+        // localStorage.setItem("education", "Matric");
+
+        // let myName = localStorage.getItem("name");
+        // let myAge = localStorage.removeItem("age");
+        // let myEducation = localStorage.getItem("education");
+        // let myCar = localStorage.getItem("car");
+
+        // localStorage.removeItem("name");
+        // localStorage.removeItem("age");
+        // localStorage.removeItem("myEducation");
+        // localStorage.removeItem("car");
+
+        // if (myCar == null) {
+        //     console.log("Vansh gareeb hai");
+        // } else {
+        //     console.log(myCar);
+        // }
+
+        // console.log(myName);
+        // console.log(myAge);
+        // console.log(myEducation);
+        // console.log(localStorage);
+
+        // localStorage.clear();
+ 
+        // let human = {
+        //     name : "sikander",
+        //     age: 20,
+        // };
+
+        // console.log(human);
+
+        // let newHuman = JSON.stringify(human);
+        // localStorage.setItem("sikander", newHuman);
+
+        // console.log(newHuman);
+
+        // JSON.stringify function converts object/array to string 
+        // JSON.parse function converts string to object/array
+
+        let newSikander = localStorage.getItem("sikander");
+        let updatedSikander = JSON.parse(newSikander);
+        console.log(updatedSikander);
+    </script>
+</body>
+
+</html>
