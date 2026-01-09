@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Enter Task" id="task">
+        <input type="submit">
+    </form>
+    <ul id="list"></ul>
+    <script>
+        let newList = JSON.parse(localStorage.getItem("list"));
+        console.log(newList);
+        let rows = "";
+        for (let i = 0; i < newList.length; i++){
+            rows +=`<list>${newList[i]}</list>`;
+        }
+        document.getElementById("list").innerHTML = rows;
+        function submitForm(event){
+            event.preventDefault();
+            let myTask = document.getElementById("task").value;
+            let list = JSON.parse(localStorage.getItem("list)");
+        }
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Enter Task" id="task" />
+      <input type="submit" />
+    </form>
+
+    <ul id="list"></ul>
+    <script>
+      let newList = JSON.parse(localStorage.getItem("list"));
+      console.log(newList);
+      let rows = "";
+      for (let i = 0; i < newList.length; i++) {
+        rows += `<li>${newList[i]}</li>`;
+      }
+      document.getElementById("list").innerHTML = rows;
+      function submitForm(event) {
+        event.preventDefault();
+        let myTask = document.getElementById("task").value;
+        let list = JSON.parse(localStorage.getItem("list"));
+        if (list == null) {
+          localStorage.setItem("list", JSON.stringify(myTodoList));
+        } else {
+          let list = JSON.parse(localStorage.getItem("list"));
+          list.push(myTask);
+          localStorage.setItem("list", JSON.stringify(list));
+        }
+      }
+    </script>
+  </body>
+</html>
