@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="generateAiResponse(event)">
+        <input type="text" id="user_prompt" placeholder="Enter your Prompt" />
+        <input type="submit" value="Generate AI Response" />
+    </form>
+    <p id="ai_response"></p>
+    <script>
+        function generateAiResponse(event) {
+            event.preventDefault();
+            let userPrompt = document.getElementById("user_prompt").value;
+            let apiKey =
+                "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";
+            let apiUrl = "https://openrouter.ai/api/v1/chat/completions";
+            let data = {
+                model: "mistralai/devstral-2512:free",
+                messages: [
+                    {
+                        role: "user",
+                        content: userPrompt.trim(),
+                    },
+                ],
+            };
+            let options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: "Bearer " + apiKey,
+                },
+                body: JSON.stringify(data),
+            };
+
+            fetch(apiUrl, options)
+                .then((res) => res.json())
+                .then((resp) => {
+                    document.getElementById("ai_response").innerText =
+                        resp.choices[0].message.content;
+                });
+        }
+    </script>
+</body>
+
+</html>
