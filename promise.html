@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //  const myPromise = new Promise((resolve, reject)=>{
+        //     let success = true;
+        //     if(success){
+        //         resolve("Data received successfully");
+        //     }else{
+        //         reject("Error occurred");
+        //     }
+        // });
+        //  console.log(myPromise);
+
+        async function getData() {
+            const res = await fetch(" https://api.escuelajs.co/api/v1/products");
+            const resp = await res.json();
+            console.log(resp);
+        }    
+        // https://fakestoreapi.com/products
+        getData();
+        
+    </script>
+</body>
+
+</html>
