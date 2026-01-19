@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="buy_now">Buy Now</button>
+    <hr>
+    <form id="ai_form">
+        <input type="text">
+        <input type="submit" id="ai_prompt" >
+    </form>
+
+    <script> 
+
+        function buyNow(){
+            console.log("Yes, You can buy");
+        }
+        let myBtn =  document.getElementById("buy_now");
+        myBtn.addEventListener("click", buyNow);
+
+        let myForm = document.getElementById("ai_form");
+        myForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            console.log("Yes, I am form");
+        });
+
+        let timer;
+        let myPromptInput = document.getElementById("ai_prompt");
+        myPromptInput.addEventListener("keyup", () => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                console.log("API" + mypromptInput.value);
+            },1000);
+        });
+    </script> 
+</body>
+</html>
