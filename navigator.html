@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="shareBtn">Share</button>
+    <script>
+        document.getElementById("shareBtn").addEventListener("click", async (e)=>{
+        //   navigator.share({
+        //     title:"Sample Share Popup",
+        //     text:"This is sample share popup",
+        //     url:"https://www.youtube.com",
+        //  });
+
+        //   await navigator.clipboard.writeText("Sikander & Sikander");
+
+        // const recognition = new webkitSpeechRecognition();
+        // recognition.start();
+        // speechSynthesis.speak(
+        //     new SpeechSynthesisUtterance("Hello"),
+        // );
+
+        // const battery = await navigator.getBattery();
+        // console.log(battery);
+
+        // Request permission
+        // await Notification.requestPermission();
+        //Show notification
+        // new Notification("Hello!", {
+        //     body: "This is a notification",
+        //     icon: "/icon.png",
+        // });
+
+        // const RAM = navigator.deviceMemory;
+        // console.log(RAM);
+
+        window.open(
+            "https://www.google.com/",
+            "NewWindow",
+            "width=500,height=500",
+        );
+        });
+    </script>
+</body>
+</html>
