@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="discordForm">
+        <textarea name="message" id="message"></textarea>
+        <input type="submit">
+    </form>
+    <script>
+        document.getElementById("discordForm").addEventListener("submit", (e) => {
+              e.preventDefault();
+              let myMessage = document.getElementById("message").value;
+        })
+
+        function sendMessage(myMessage){
+            const DiscordWebhookURL = 
+              "https://discord.com/api/webhooks/1470369287716999221/2E6SJKkxDt1BVYjkrtQ9Baua2GMJ4ctCWTcBBL43xVa3DG1ieDAquYV_XEGW5nrJd1rI"
+              let data = {
+                content: myMessage,
+              };
+              let option = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body : JSON.stringify(data),
+              };
+              fetch(DiscordWebhookURL, option);
+        }
+    </script>
+</body>
+</html>
